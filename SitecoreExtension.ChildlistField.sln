@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SitecoreExtension.ChildlistField", "src\SitecoreExtension.ChildlistField.csproj", "{B0400C3D-6B4B-42F1-ABA8-8A3D3D40139F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Github", "Github", "{AD9E7D0D-A100-43D2-9D3C-749E5F722323}"
+	ProjectSection(SolutionItems) = preProject
+		readme.md = readme.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NuGet", "NuGet", "{12CA252F-95D5-4799-AE12-2F0B829F61A3}"
+	ProjectSection(SolutionItems) = preProject
+		NuGet\Package.nuspec = NuGet\Package.nuspec
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B0400C3D-6B4B-42F1-ABA8-8A3D3D40139F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0400C3D-6B4B-42F1-ABA8-8A3D3D40139F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0400C3D-6B4B-42F1-ABA8-8A3D3D40139F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0400C3D-6B4B-42F1-ABA8-8A3D3D40139F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

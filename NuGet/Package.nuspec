@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<package >
+	<metadata>
+		<id>SitecoreExtension.ChildlistField</id>
+		<version>1.0</version>
+		<authors>Ole Thorsager @ 1508.dk</authors>
+		<owners>1508 A/S</owners>
+		<licenseUrl>http://creativecommons.org/licenses/by/3.0/</licenseUrl>
+		<projectUrl>https://github.com/1508/SitecoreExtension-ChildlistField</projectUrl>
+		<iconUrl>http://www.sitecore.net/favicon.ico</iconUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<summary>
+			Sitecore List Field for Administrating Child Items.
+		</summary>
+		<description>
+			Sitecore List Field for Administrating Child Items under the current Item without the content tree.
+			Created for administrating simple child types like Link Lists.
+
+			Requires Sitecore 6.x and Sitecore Rocks.
+			PageEditor mode is not implemented.
+		</description>
+		<releaseNotes>
+			Version 1.0 - Initial release.
+		</releaseNotes>
+		<copyright>http://creativecommons.org/licenses/by/3.0/</copyright>
+		<tags>Sitecore Fieldtype</tags>
+		<dependencies>
+		</dependencies>
+	</metadata>
+	<files>
+		<file src="**\*.*" exclude="Build-NuGet-Package.cmd;NuGet.exe" />
+	</files>
+</package>
