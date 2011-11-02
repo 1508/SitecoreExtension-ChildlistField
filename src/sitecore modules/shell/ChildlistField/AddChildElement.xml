@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <control xmlns:def="Definition" xmlns="http://schemas.sitecore.net/Visual-Studio-Intellisense">
   <AddChildElement>
-    <FormDialog Icon="xpac/24x24/context.png" Header="Create new item"
+    <FormDialog Icon="Control/16x16/treeview.png" Header="Create new item"
       Text="Use this form to create a new child element" >
 
       <CodeBeside Type="SitecoreExtension.ChildlistField.UI.AddChildElement,SitecoreExtension.ChildlistField"/>
