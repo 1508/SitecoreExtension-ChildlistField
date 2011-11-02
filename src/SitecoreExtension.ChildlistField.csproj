@@ -83,7 +83,8 @@
   </Target>
   -->
   <PropertyGroup>
-    <PostBuildEvent>
-    </PostBuildEvent>
+    <PostBuildEvent>if "$(ConfigurationName)" =="Release" robocopy "$(SolutionDir)src\App_Config" "$(SolutionDir)NuGet\content\App_Config" /S 
+if "$(ConfigurationName)" =="Release" robocopy "$(SolutionDir)src\sitecore modules" "$(SolutionDir)NuGet\content\sitecore modules" /S 
+</PostBuildEvent>
   </PropertyGroup>
 </Project>

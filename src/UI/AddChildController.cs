@@ -80,7 +80,7 @@
                 url.Append("database", args.Parameters["database"]);
                 url.Append("lang", args.Parameters["la"]);
 
-                Sitecore.Context.ClientPage.ClientResponse.ShowModalDialog(url.ToString(), "175px", "230px", string.Empty, true);
+                Sitecore.Context.ClientPage.ClientResponse.ShowModalDialog(url.ToString(), "400px", "300px", string.Empty, true);
                 args.WaitForPostBack(true);
             }
         }

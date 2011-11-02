@@ -7,7 +7,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyDescription("Sitecore List Field for Administrating Child Items under the current Item without the content tree.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("1508 A/S")]
-[assembly: AssemblyCopyright("Sharing is caring © 1508 A/S 2011")]
+[assembly: AssemblyCopyright("Sharing is caring © 1508 A/S")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

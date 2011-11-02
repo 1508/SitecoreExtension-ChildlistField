@@ -57,7 +57,7 @@
             {
                 if(_selectedId == null)
                 {
-                    _selectedId = Sitecore.Context.ClientPage.ClientRequest.Form[GetID("SelectedId")];
+                    _selectedId = Sitecore.Context.ClientPage.ClientRequest.Form[GetID("selectedId")];
                     if (_selectedId == null)
                     {
                         _selectedId = string.Empty;
@@ -130,7 +130,7 @@
                 strEnabled = " disabled=\"disabled\"";
             }
 
-            output.Write("<input type=\"hidden\" id=\"" + GetID("SelectedId") + "\" value=\"\"/>");
+            output.Write("<input type=\"hidden\" id=\"" + GetID("selectedId") + "\" value=\"\"/>");
             output.Write("<input type=\"hidden\" id=\"" + GetID("Value") + "\" value=\"\"/>");
             output.Write("<table class=\"scContentControl\" id=\"" + this.ID + "\">");
             output.Write("<tr>");
