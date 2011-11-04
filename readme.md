@@ -14,8 +14,6 @@ Created for administrating simple child types like Link Lists.
 Install via nuget install-package SitecoreExtension.ChildlistField on the Sitecore Rocks attached web project.
 Set the field type Childlist on a template of choice. 
 
--------
-
 ## Possible improvements 
 * PageEditor mode is supported through Edit Related Item but a direct editing interface would be even better.
 
