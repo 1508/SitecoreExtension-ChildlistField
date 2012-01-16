@@ -1,4 +1,6 @@
-﻿namespace SitecoreExtension.ChildlistField.UI
+﻿using Sitecore.Data;
+
+namespace SitecoreExtension.ChildlistField.UI
 {
     using System.Collections.Generic;
     using System.Text;
@@ -161,7 +163,7 @@
         /// <param name="siblingAboveId"></param>
         private void AddNewChild(string siblingAboveId)
         {
-            Language lang = GetDataContext().CurrentItem.Language;
+            Language lang = GetEditingContextLanguage();
             Item currentItem = Sitecore.Context.ContentDatabase.GetItem(this.ItemID, lang);
             AddChildController childController = new AddChildController();
             childController.AddNewChild(currentItem, lang);
@@ -177,7 +179,7 @@
             {
                 return;
             }
-            Language lang = GetDataContext().CurrentItem.Language;
+            Language lang = GetEditingContextLanguage();
             Item itemToEdit = Sitecore.Context.ContentDatabase.GetItem(id, lang);
             if (itemToEdit == null)
             {
@@ -201,7 +203,7 @@
         {
             List<Item> children = new List<Item>();
 
-            Language lang = GetDataContext().CurrentItem.Language;
+            Language lang = GetEditingContextLanguage();
             Item currentItem = Sitecore.Context.ContentDatabase.GetItem(this.ItemID, lang);
             List<string> templateIDs = new List<string>();
             if (currentItem.Template.StandardValues == null || currentItem.Template.StandardValues.Fields[Sitecore.FieldIDs.Branches] == null)
@@ -226,9 +228,21 @@
             return children;
         }
 
+        /// <summary>
+        /// Editor language must be taken into account when adding new Items to the list for setting the correct language context based on the editing language and not the site language.
+        /// </summary>
+        /// <returns></returns>
+        private Language GetEditingContextLanguage()
+        {
+            var editorDataContext = GetDataContext();
+            
+            // if the EditorDataContext cannot be found (e.g. in PageEdit mode) the general Context Language is used.
+            return editorDataContext != null ? GetDataContext().CurrentItem.Language : Sitecore.Context.Language;
+        }
+
         private new DataContext GetDataContext()
         {
-            return Assert.ResultNotNull<DataContext>(Sitecore.Context.ClientPage.FindSubControl("ContentEditorDataContext") as DataContext);
+            return Sitecore.Context.ClientPage.FindSubControl("ContentEditorDataContext") as DataContext;
         }
 
         /// <summary>
@@ -321,7 +335,7 @@
                 return;
             }
 
-            Language lang = GetDataContext().CurrentItem.Language;
+            Language lang = GetEditingContextLanguage();
             Item itemToRemove = Sitecore.Context.ContentDatabase.GetItem(id, lang);
             if(itemToRemove == null)
             {
@@ -333,6 +347,7 @@
             SheerResponse.SetOuterHtml(GetID("selected"), GetSelectFieldHtml(string.Empty));
             SheerResponse.SetAttribute(GetID("SelectedId"), "value", string.Empty);
         }
+
 
         /// <summary>
         /// Helper method to render a button
