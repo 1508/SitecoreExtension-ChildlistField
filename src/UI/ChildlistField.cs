@@ -237,7 +237,12 @@ namespace SitecoreExtension.ChildlistField.UI
             var editorDataContext = GetDataContext();
             
             // if the EditorDataContext cannot be found (e.g. in PageEdit mode) the general Context Language is used.
-            return editorDataContext != null ? GetDataContext().CurrentItem.Language : Sitecore.Context.Language;
+            Language language;
+
+            if (!Language.TryParse(this.ItemLanguage, out language))
+                language = Sitecore.Context.Language;
+
+            return editorDataContext != null ? GetDataContext().CurrentItem.Language : language;
         }
 
         private new DataContext GetDataContext()
