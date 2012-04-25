@@ -2,7 +2,7 @@
 <package >
 	<metadata>
 		<id>SitecoreExtension.ChildlistField</id>
-		<version>1.1</version>
+		<version>1.2</version>
 		<authors>Ole Thorsager @ 1508.dk</authors>
 		<owners>1508 A/S</owners>
 		<licenseUrl>http://creativecommons.org/licenses/by/3.0/</licenseUrl>
@@ -20,6 +20,7 @@
 			PageEditor mode is not implemented.
 		</description>
 		<releaseNotes>
+			Version 1.2 - Language Context for PageEdit Mode Error fixed
 			Version 1.1 - Language Context for PageEdit mode.
 			Version 1.0 - Initial release.
 		</releaseNotes>
