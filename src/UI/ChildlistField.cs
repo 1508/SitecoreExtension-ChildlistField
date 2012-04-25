@@ -307,7 +307,7 @@ namespace SitecoreExtension.ChildlistField.UI
                 return;
             }
 
-            if (itemToSwap.Fields[FieldIDs.Sortorder].Value == "0" || swapWith.Fields[FieldIDs.Sortorder].Value == "0")
+            if (itemToSwap.Fields[FieldIDs.Sortorder].Value == "0" || swapWith.Fields[FieldIDs.Sortorder].Value == "0" || string.IsNullOrWhiteSpace(itemToSwap.Fields[FieldIDs.Sortorder].Value) || string.IsNullOrWhiteSpace(swapWith.Fields[FieldIDs.Sortorder].Value))
             {
                 SetNewSortordersOnChildren();
             }
